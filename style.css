@@ -1,3 +1,9 @@
+:root {
+    --primary-black: #0f0f0f;
+    --gold: #c6a75e;
+    --white: #ffffff;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,30 +13,50 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
+    padding: 18px 40px;
+    background: var(--primary-black);
+}
+
+.logo {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--white);
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
 }
 
 .btn-reserve {
-    background: #000;
-    color: #fff;
-    padding: 8px 15px;
+    background: var(--gold);
+    color: var(--primary-black);
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
+
+.btn-reserve:hover {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
 .hero {
     height: 90vh;
     background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center center/cover;
